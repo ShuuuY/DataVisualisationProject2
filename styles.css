@@ -18,8 +18,11 @@ body {
 .bolded { font-weight: bold; }
 .emphasized { font-style: italic; }
 .underlined {text-decoration: underline;}
-#topvis {display: flex;
-    align-items: center;}
+
+#topvis {
+    display: flex;
+    align-items: center;
+}
 
 mark.red {
     color:#ff0000;
