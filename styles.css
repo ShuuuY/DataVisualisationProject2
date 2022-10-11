@@ -29,6 +29,21 @@ mark.blue {
     background: none;
 }
 
+mark.gold {
+    color:#FFD700;
+    background: none;
+}
+
+mark.silver {
+    color:#C0C0C0;
+    background: none;
+}
+
+mark.bronze {
+    color:#CD7F32;
+    background: none;
+}
+
 .page {
     width: 1600px;
     
