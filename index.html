@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Multiple Visualisations | An Example</title>
+  <title>DataVisualisationProject2</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -31,27 +31,42 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>                     Which country performed best in the Olympics? </h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+        <h1> Which country performed best in the Olympics? </h1>
+        <p style="text-align:center;">The data is updated to <span class="emphasized">2018</span></p>
       </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="description description-left">
-          <h2>Two Columns Layout</h2>
+      <div class="pure-u-1-2">
+         <h2>Top <span class="emphasized">10</span> countries with the most medals</h2>
           <img src="./下载.png" alt="IsotypeMedals">
-        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <p>The graph of each medal represents about
+          <font size="+2"><span class="emphasized">20</span></font>
+          medals in real life, and the top-ranked 
+          <font size="+2"><span class="bolded">United States </span></font>
+          is not visualized here because the data for 
+          <font size="+2"><span class="bolded">the United States </span></font> 
+          is too different from that of other countries. The total number of medals in <font size="+2"><span class="bolded">the United States </span></font>
+          is <font size="+2"><span class="emphasized">2828</span></font>, 
+          the number of <mark class="gold">gold</mark> medals is <font size="+2"><span class="emphasized">1127</span></font>, the number of <mark class="silver">silver</mark> medals is <font size="+2"><span class="emphasized">907</span></font>, 
+          and the number of <mark class="bronze">bronze</mark> medals is <font size="+2"><span class="emphasized">794</span></font></p>
+      </div>
+
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-3">
+        <h2><mark class="red">Summer</mark> Olympics Medals Distribution</h2>
         <div id="vis1" class="vis-container"></div>
       </div>
       <div class="pure-u-1-3">
+        <h2><mark class="blue">Winter</mark> Olympics Medals Distribution</h2>
         <div id="vis2" class="vis-container" style="margin-left: 300px;"></div>
       </div>
 
