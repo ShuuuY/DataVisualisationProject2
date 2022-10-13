@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ShuuuY/week9homework/main/Olympic_top10.csv"
+  },
+  "title": "",
+  "repeat": {"column": ["GoldInWinter", "SilverInWinter", "BronzeInWinter"]},
+  "params": [
+    {
+      "name": "countrySelection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "United States of America",
+          "Soviet Union",
+          "Great Britain",
+          "France",
+          "Germany",
+          "Italy",
+          "China",
+          "Australia",
+          "Sweden",
+          "Hungary"
+        ],
+        "labels": [
+          "Show all",
+          "United States of America",
+          "Soviet Union",
+          "Great Britain",
+          "France",
+          "Germany",
+          "Italy",
+          "China",
+          "Australia",
+          "Sweden",
+"Hungary"
+        ],
+        "name": "Country Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "countrySelection== null || datum.Country == countrySelection"}
+  ],
+  "spec": {
+    "width":100,
+    "height":300,
+    "mark": {"type": "bar","color":"skyblue"},
+    "encoding": {
+       "y": {
+          "field": {"repeat": "column"},
+          "type": "quantitative"
+        },
+        "x": {"field": {"repeat": "repeat"}, "type": "nominal"}
+    
+      
+  }
+   
+    
+    }
+}
