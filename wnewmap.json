@@ -1,0 +1,193 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 850,
+  "height": 400,
+  "projection": {
+    "type": "equalEarth",
+    "scale": {"expr": "zooming"},
+    "center": {"expr": "centering"}
+  },
+  "params": [
+    {
+      "name": "zooming",
+      "value": 150,
+      "bind": {
+        "input": "range",
+        "min": 150,
+        "max": 300,
+        "step": 5,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "centering",
+      "value": [0, 0],
+      "bind": {
+        "input": "select",
+        "options": [
+          [0, 0],
+          [-64, -38],
+          [134, -25],
+          [-106, 56],
+          [-52, -14],
+          [105, 62],
+          [138, 36],
+          [-78, -1.8],
+          [23, -30]
+        ],
+        "labels": [
+          "Default",
+          "Argentina",
+          "Australia",
+          "Canada",
+          "Brazil",
+          "Russia",
+          "Japan",
+          "Ecuador",
+          "South Africa"
+        ],
+        "name": "Map Centre: "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ShuuuY/week9homework/main/ne_110m%20(1).json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+              "data": {
+                "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+                "format": {"type": "topojson", "feature": "oceans"}
+              },
+              "mark": {"type": "geoshape", "fill": "lightblue"}
+            },
+            {
+              "data": {
+                "url": "https://raw.githubusercontent.com/ShuuuY/week9homework/main/ne_110m%20(1).json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "ne_110m_graticules_30"
+                }
+              },
+              "mark": {"type": "geoshape", "fill": null, "stroke": "white"}
+            },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ShuuuY/week9homework/main/ne_110m%20(1).json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/ShuuuY/week9homework/main/Olympic.csv"
+            },
+            "key": "Country",
+            "fields": ["WinterTotalMedals"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "grey"},
+              "params": [
+                {"name": "countrySelection", "select": {"type": "point"}}
+              ],
+              "encoding": {
+                "color": {
+                  "field": "WinterTotalMedals",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "properties.NAME",
+                    "type": "nominal",
+                    "title": "Country"
+                  },
+                  {
+                    "field": "WinterTotalMedals",
+                    "type": "quantitative",
+                    "title": "Total medals"
+                  }
+                ]
+              }
+            },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ShuuuY/DataVisualisationProject2/main/location.csv"
+      },
+      "encoding": {
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "longitude": {"field": "longitude", "type": "quantitative"}
+      },
+      "layer": [
+        {
+          "mark": {"type": "text", "fontWeight": "bold","color":"white","size":10},
+          "encoding": {
+            "text": {
+              "condition": {"test": "datum.name == 'Russia'", "value": "Russia"}
+            }
+          }
+        },
+        {
+          "mark": {"type": "text", "fontWeight": "bold","color":"white","size":10},
+          "encoding": {
+            "text": {
+              "condition": {"test": "datum.name == 'China'", "value": "China"}
+            }
+          }
+        },
+        {
+          "mark": {"type": "text", "fontWeight": "bold","color":"white","size":10},
+          "encoding": {
+            "text": {
+              "condition": {
+                "test": "datum.name == 'Australia'",
+                "value": "Australia"
+              }
+            }
+          }
+        },
+        {
+          "mark": {"type": "text", "fontWeight": "bold","color":"white","size":10},
+          "encoding": {
+            "text": {
+              "condition": {"test": "datum.name == 'Canada'", "value": "Canada"}
+            }
+          }
+        },
+        {
+          "mark": {"type": "text", "fontWeight": "bold","color":"white","size":10},
+          "encoding": {
+            "text": {
+              "condition": {"test": "datum.name == 'Norway'", "value": "Norway"}
+            }
+          }
+        },
+        {
+          "mark": {"type": "text", "fontWeight": "bold","color":"white","size":10},
+          "encoding": {
+            "text": {
+              "condition": {
+                "test": "datum.name == 'United States of America'",
+                "value": "United States"
+              }
+            }
+          }
+        },
+        {
+          "mark": {"type": "text", "fontWeight": "bold","color":"white","size":10},
+          "encoding": {
+            "text": {
+              "condition": {"test": "datum.name == 'Germany'", "value": "Germany"}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
