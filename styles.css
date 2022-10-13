@@ -49,6 +49,35 @@ mark.bronze {
     background: none;
 }
 
+mark.pink {
+    color:#FFB6C1;
+    background: none;
+}
+
+mark.lightblue {
+    color:#89CFF0;
+    background: none;
+}
+
+mark.wcred {
+    color:#C41E3A;
+    background: none;
+}
+
+mark.wcblue {
+    color:#0047AB;
+    background: none;
+}
+
+mark.wcyellow {
+    color:#FDDA0D;
+    background: none;
+}
+
+mark.wcgreen {
+    color:#008000;
+    background: none;
+}
 .page {
     width: 1200px;
     
