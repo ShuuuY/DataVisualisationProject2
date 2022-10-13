@@ -34,6 +34,10 @@ mark.blue {
     background: none;
 }
 
+mark.black {
+    color:#000000;
+    background: #EADDCA;
+}
 mark.gold {
     color:#FFD700;
     background: none;
