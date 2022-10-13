@@ -191,7 +191,7 @@
           }
         },
         {
-          "mark": {"type": "text", "fontWeight": "bold"},
+          "mark": {"type": "text", "fontWeight": "bold","color":"white","size":10},
           "encoding": {
             "text": {
               "condition": {"test": "datum.name == 'Brazil'", "value": "Brazil"}
