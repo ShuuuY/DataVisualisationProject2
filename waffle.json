@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 350,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/ShuuuY/week9homework/main/Waffle.csv"
+  },
+  "params": [
+    {
+      "name": "gender_highlight",
+      "select": {"type": "point", "fields": ["Gender"]},
+      "bind": "legend"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "square", "size": 500},
+      "encoding": {
+        "x": {"field": "Column", "type": "quantitative", "axis": null},
+        "y": {"field": "Row", "type": "quantitative", "axis": null},
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {
+            "type": "ordinal",
+            "domain": [
+              "Male","Female"
+            ],
+            "range": ["#89CFF0", "#FFB6C1"]
+          },
+          "legend": {
+            "labelFont": "Roboto",
+            "labelFontSize": 15,
+            "titleFont": "Roboto",
+            "titleFontSize": 15,
+            "title": "Gender",
+            "padding": 30
+          }
+        },
+        "opacity": {
+          "condition": {"param": "gender_highlight", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Gender", "type": "nominal"},
+          {
+            "field": "Percentage",
+            "type": "nominal",
+            "title": "Percentage"
+          }
+        ]
+      }
+    }
+  ]
+}
