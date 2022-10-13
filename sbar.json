@@ -44,7 +44,7 @@
     {"filter": "countrySelection== null || datum.Country == countrySelection"}
   ],
   "spec": {
-    "width":100,
+    "width":150,
     "height":300,
     "mark": {"type": "bar","color":"indianred"},
     "encoding": {
