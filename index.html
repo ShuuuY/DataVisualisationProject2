@@ -27,6 +27,40 @@
 <body>
 
   <div class="page">
+    
+        <!-- pure grid group -->
+    <div class="pure-g" id = "topvis">
+      <div class="pure-u-2-3">
+         <h2 style="text-indent:-2em">Top <span class="emphasized">10</span> countries with the most medals</h2>
+          <div id="vis3" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <p class="big">The graph of each medal represents about
+          <font size="+1"><span class="emphasized">20</span></font>
+          medals in real life, and the top-ranked 
+          <font size="+1"><span class="bolded">United States </span></font>
+          is not visualized here because the data for 
+          the United States
+          is too different from that of other countries. The total number of medals in the United States
+          is <font size="+1"><span class="emphasized">2828</span></font>, 
+          the number of <font size="+1"><mark class="gold"><span class="bolded">gold</span></mark></font> medals is <font size="+1"><span class="emphasized">
+          1127</span></font>, the number of <font size="+1"><mark class="silver"><span class="bolded">silver</span></mark></font> medals is <font size="+1"><span class="emphasized">907</span></font>, 
+          and the number of <font size="+1"><mark class="bronze"><span class="bolded">bronze</span></mark></font> medals is <font size="+1"><span class="emphasized">794</span></font></p>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+        <h2> Ratio of Olympic Medals by <mark class="lightblue">GEN</mark><mark class="pink">DER</mark></h2>
+        <div id="vis6" class="vis-container" style="margin-left: 50px;"></div>
+      </div>
+      <div class="pure-u-2-3">
+        <h2> Which <mark class="wcblue">S</mark>P<mark class="wcyellow">O</mark><mark class="wcgreen">R</mark><mark class="wcred">T</mark> Produces more Medals?</h2>
+        <div id="vis7" class="vis-container" style="margin-left: 50px;"></div>
+      </div>
+    </div>
+ 
 
     <!-- pure grid group -->
     <div class="pure-g">
@@ -76,40 +110,8 @@
       </div>
 
     </div>
-    
-    <!-- pure grid group -->
-    <div class="pure-g" id = "topvis">
-      <div class="pure-u-2-3">
-         <h2 style="text-indent:-2em">Top <span class="emphasized">10</span> countries with the most medals?</h2>
-          <div id="vis3" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <p class="big">The graph of each medal represents about
-          <font size="+1"><span class="emphasized">20</span></font>
-          medals in real life, and the top-ranked 
-          <font size="+1"><span class="bolded">United States </span></font>
-          is not visualized here because the data for 
-          the United States
-          is too different from that of other countries. The total number of medals in the United States
-          is <font size="+1"><span class="emphasized">2828</span></font>, 
-          the number of <font size="+1"><mark class="gold"><span class="bolded">gold</span></mark></font> medals is <font size="+1"><span class="emphasized">
-          1127</span></font>, the number of <font size="+1"><mark class="silver"><span class="bolded">silver</span></mark></font> medals is <font size="+1"><span class="emphasized">907</span></font>, 
-          and the number of <font size="+1"><mark class="bronze"><span class="bolded">bronze</span></mark></font> medals is <font size="+1"><span class="emphasized">794</span></font></p>
-      </div>
+  </div> <!-- end page -->    
 
-    </div>
-    <!-- end pure grid group -->
-     <div class="pure-g">
-      <div class="pure-u-1-3">
-        <h2> Ratio of Olympic Medals by <mark class="lightblue">GEN</mark><mark class="pink">DER</mark></h2>
-        <div id="vis6" class="vis-container" style="margin-left: 50px;"></div>
-      </div>
-      <div class="pure-u-2-3">
-        <h2> Which <mark class="wcblue">S</mark>P<mark class="wcyellow">O</mark><mark class="wcgreen">R</mark><mark class="wcred">T</mark> Produces more Medals</h2>
-        <div id="vis7" class="vis-container" style="margin-left: 50px;"></div>
-      </div>
-    </div>
-  </div> <!-- end page -->
 
   <script type="text/javascript">
     var specVis1 = "./smapnew.json";
