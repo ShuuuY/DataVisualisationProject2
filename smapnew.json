@@ -89,7 +89,7 @@
               "url": "https://raw.githubusercontent.com/ShuuuY/week9homework/main/Olympic.csv"
             },
             "key": "Country",
-            "fields": ["SummerTotalMedals"]
+            "fields": ["SummerTotalMedals","summer_rank","GoldInSummer","SilverInSummer","BronzeInSummer"]
           }
         }
       ],
@@ -122,8 +122,29 @@
                   {
                     "field": "SummerTotalMedals",
                     "type": "quantitative",
-                    "title": "Total medals"
+                    "title": "Total Medals"
+                  },
+                   {
+                    "field": "GoldInSummer",
+                    "type": "quantitative",
+                    "title": "Gold"
+                  },
+                   {
+                    "field": "SilverInSummer",
+                    "type": "quantitative",
+                    "title": "Silver"
+                  },
+                   {
+                    "field": "BronzeInSummer",
+                    "type": "quantitative",
+                    "title": "Bronze"
+                  },
+                  {
+                    "field": "summer_rank",
+                    "type": "quantitative",
+                    "title": "Rank"
                   }
+
                 ]
               }
             },
