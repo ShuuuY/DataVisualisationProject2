@@ -89,7 +89,7 @@
               "url": "https://raw.githubusercontent.com/ShuuuY/week9homework/main/Olympic.csv"
             },
             "key": "Country",
-            "fields": ["WinterTotalMedals"]
+            "fields": ["WinterTotalMedals","winter_rank","GoldInWinter","SilverInWinter","BronzeInWinter"]
           }
         }
       ],
@@ -111,8 +111,29 @@
                   {
                     "field": "WinterTotalMedals",
                     "type": "quantitative",
-                    "title": "Total medals"
+                    "title": "Total Medals"
+                  },
+                  {
+                    "field": "GoldInWinter",
+                    "type": "quantitative",
+                    "title": "Gold"
+                  },
+                  {
+                    "field": "SilverInWinter",
+                    "type": "quantitative",
+                    "title": "silver"
+                  },
+                  {
+                    "field": "BronzeInWinter",
+                    "type": "quantitative",
+                    "title": "bronze"
+                  },
+                  {
+                    "field": "winter_rank",
+                    "type": "quantitative",
+                    "title": "Rank"
                   }
+            
                 ]
               }
             },
