@@ -46,7 +46,7 @@
   "spec": {
     "width":150,
     "height":300,
-    "mark": {"type": "bar","color":"skyblue"},
+    "mark": {"type": "bar","color":"#0000A0"},
     "encoding": {
        "y": {
           "field": {"repeat": "column"},
