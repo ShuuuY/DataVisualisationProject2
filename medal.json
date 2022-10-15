@@ -368,7 +368,11 @@
     "column": {"field": "country", "header": {"title": ""}},
     "text": {"field": "emoji", "type": "nominal"},
     "size":
-{"value": 20}
+{"value": 20},
+"tooltip":[{"field": "country", "type": "ordinal","title":"Country"},{"field": "medal", "type": "nominal","title":"Medal Pattern Type"},
+{"field": "rank", "type": "ordinal","title":"Medal Pattern Quantity"}
+]
   }
 }
+ 
  
